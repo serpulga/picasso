@@ -1,0 +1,53 @@
+TARGETED PLATFORMS
+
+UNIX-like operating systems and/or platforms where the Python Curses library is supported.
+
+
+RUNNING:
+
+$ python picasso.py
+
+or
+
+$ ./picasso
+
+
+The program will prompt the user for command input, supported commands are:
+
+C w h: Draws a canvas with width w and height h
+
+L x1 y1 x2 y2: Draws line from point (x1, y1) to point (x2, y2)
+               (Make sure line is either vertical or horizontal)
+
+R x1 y1 x2 y2: Draws a rectangle with (x1, y1) as upper left corner, and
+               (x2, y2) as lower right corner
+
+B x y color: Fill area containing point (x, y) with selected color.
+             color must be alphanumeric.
+
+
+RUNNING UNIT TESTS:
+
+The test suite uses the Python library mock, before running the tests install it by running:
+
+$ pip install mock
+
+After that, the tests can be run:
+
+$ python tests.py
+
+
+MANUAL TESTS:
+
+$ python picasso.py tests
+
+These tests run predetermined commands, and the output should be as follows:
+
+----------------------
+|oooooooooooooooxxxxx|
+|xxxxxxooooooooox   x|
+|     xoooooooooxxxxx|
+|     xoooooooooooooo|
+----------------------
+
+This test can be run to quickly determine if the program is working to some extent.
